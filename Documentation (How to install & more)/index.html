@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StislaSkin | Documentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="assets/favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+      
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+</head> 
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo" align="center">
+                        <a href="index.html">
+                            <span class="text-highlight">Stisla</span><span class="text-bold">Skin</span>
+                        </a>
+                    </h1>
+                    
+                </div><!--//branding-->
+                
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title">Documentation</h1>
+                    <div class="meta">StislaSkin by Carlos Eduardo</div>
+                </div><!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <div class="callout-block callout-danger">
+                                <div class="icon-holder">
+                                    <svg class="svg-inline--fa fa-exclamation-triangle fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg><!-- <i class="fas fa-exclamation-triangle"></i> -->
+                                </div><!--//icon-holder-->
+                                <div class="content">
+                                    <p>StislaSkin was developed using <a href="https://forum.phpvms.net/topic/26545-phpvms-55272-phpvms-552-updated-for-php-72/">phpVMS 5.5.7.2 (ProAvia)</a>, however it will not work in <a href="https://forum.phpvms.net/forum/55-phpvms-7/">phpVMS 7</a> and will not work correctly in <a href="https://github.com/DavidJClark/phpvms_5.5.x">5.5.x</a>. </p>
+                                </div><!--//content-->
+                            </div>
+
+                            <section id="before-section" class="doc-section">
+                                <h2 class="section-title">Before Start</h2>
+                                <div class="section-block">
+                                    <p>Before I start, I wanted to clarify some important things. My name is <a href="https://forum.phpvms.net/profile/51947-carloseduardo2409/">Carlos Eduardo</a> and I developed this skin for phpVMS. It is important to note that this admin panel was NOT DONE by me, I just adapted the admin panel with phpVMS. StislaSkin uses the admin template "Stisla Admin Template" by <a href="https://getstisla.com/">Muhamad Nauval Azhar</a>, a free admin panel. Therefore, the importance of keeping the credits on the footer is totally necessary and should not be removed in ANY WAY!!</p>
+                                    <a href="https://getstisla.com/" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Get Stisla Admin</a>
+                                    <a href="https://forum.phpvms.net/profile/51947-carloseduardo2409/" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> Get StislaSkin</a>
+                                    <br><br><p>I would like to apologize sincerely if there are any spelling errors, as my native language is not English and I am not fluent at all, so there may be errors.</p>
+                                </div>
+                            </section>
+                            <section id="requirements-section" class="doc-section">
+                                <h2 class="section-title">Requirements</h2>
+                                <div class="section-block">
+                                    <p>Like many other skins or anything that exists, StislaSkin has some requirements, and all of them are very important. Are they:</p>
+                                    <ul class="list">
+                                        <li><a href="https://forum.phpvms.net/topic/26545-phpvms-55272-phpvms-552-updated-for-php-72/">phpVMS 5.5.7.2 from ProAvia</a></li>
+                                        <li><a href="https://checkwx.com">CheckWX API</a></li>
+                                        <li>All necessary module <b>(It is not necessary to install because they are already in the file you installed):</b>
+                                            <ul><li><a href="https://forum.phpvms.net/topic/24213-weather-map/">Weather Map</a> (Code Snippets by MrDalle)</li></ul>
+                                            <ul><li><a href="https://github.com/web541/phpVMS-FltbookSystem-v2">Fltbook v2</a> (by web541)</li></ul>
+                                            <ul><li><a href="https://forum.phpvms.net/topic/2989-touchdownstats-10/">TouchdownStats</a> (by simpilot)</li></ul>
+                                            <ul><li><a href="https://forum.phpvms.net/topic/2599-eventbooking-beta-13/">Event Booking</a> (by simpilot)</li></ul>
+                                            <ul><li><a href="https://forum.phpvms.net/topic/8282-pilot-career-page-v1/">Pilot Career</a> (by servetas)</li></ul>
+                                            <ul><li><a href="https://github.com/DavidJClark/phpVMS-TopPilot">TopPilots</a> (by simpilot)</li></ul>
+                                            <ul><li><a href="https://forum.phpvms.net/topic/21107-extended-fleet-v10/">Extended Fleet</a> (by magicflyer</li></ul>
+                                            <ul><li><a href="https://forum.phpvms.net/topic/5383-airport-information-addon/">Airports</a> (by stuartpb)</li></ul>
+                                            <ul><li><a href="https://forum.phpvms.net/topic/21388-sim-brief-for-phpvms/">Simbrief for phpVMS</a> (by Vangelis)</li></ul>
+                                            <ul><li><a href="https://forum.phpvms.net/topic/5822-airmail-30/">Airmail 3</a> (by simpilot)</li></ul>
+                                            <ul><li>LiveMap (by me)</li></ul>
+                                            <ul><li>Weather (by me)</li></ul>
+                                            <ul><li>Book Flight by Map (by me)</li></ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section id="package-section" class="doc-section">
+                                <h2 class="section-title">Package</h2>
+                                <div class="section-block">
+                                    <p>Due to the large amount of files, I ended up organizing the folders to make the installation as simple as possible. So, in an explanatory way, they are organized in this way:</p>
+                                    <ul class="list">
+                                        <li><b>3rd Party Modules:</b> Contains the necessary third party modules. <br><b>Note:</b> It is <b>VERY</b> important that you use the modules that are in this folder, and do not install the default module, because the files are modified for the skin.</li>
+                                        <li><b>Core:</b> Contains modified files that are totally necessary for the skin and my modules.</li>
+                                        <li><b>Lib:</b> Contains files with integration for the Leaflet and new pilot image.</li>
+                                        <li><b>StislaSkin:</b> And lastly and most importantly, this is your skin folder, which we will talk more about below.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Installation</h2>
+                                <div class="section-block">
+                                    <p>Now we will start the most difficult part, the installation. It is also very important that you follow all the steps carefully and do everything that is being requested, otherwise, it is very likely that in the end result you will get some error.<br/>Now let's stop winding and go to the installation!</p>
+                                </div>
+                                <div id="step1"  class="section-block">
+                                    <h3 class="block-title">Step One (Skin Installation)</h3>
+                                    <p>We will start with the most important part, that is, importing our skin into your phpVMS. Let's go then!</p>
+                                    <ol class="list">
+                                        <li>First, go to the directory where your phpVMS is installed, after that go to "<i><ins>lib/skins</ins></i>".</li>
+                                        <li>We will now go to our installed skin package, and we will go to the main directory (first directory), where you will find the "<i>StislaSkin</i>" folder.</li>
+                                        <li>After finding the "<i>StislaSkin</i>" folder, depending on where you are, copy it or upload it into the "<i>skin</i>" folder, mentioned in the first step.</li>
+                                    </ol>
+                                    <p>As I don't have a hosting, I will be using the windows directory (on localhost - XAMPP) as an example. So, the first step is already done and should look like this:</p>
+                                    <div class="screenshot-holder">
+                                        <a href="assets/stepone.png" data-title="Step One - Final Result" data-toggle="lightbox"><img class="img-fluid" src="assets/stepone.png" alt="screenshot" /></a>
+                                        <a class="mask" href="assets/stepone.png" data-title="Step One - Final Result" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                    </div> 
+                                </div><!--//section-block-->
+                                <div id="step2"  class="section-block">
+                                    <h3 class="block-title">Step Two (Leaflet Conversion)</h3>
+                                    <p>Okay, so we finished the first step, but it doesn’t mean that everything is okay to start using the skin, we need a few more steps, not least because this is not a simple skin. Now, <b>we will convert Google Maps to Leaflet</b>, a part that will take approximately 5 minutes, or more, or less, but at most 10, I promise.<br>
+                                    <p>Our dear Nabeelio, developer of phpVMS, has already made a "<a href="https://gist.github.com/nabeelio/8b7ab29fb67dfe27284d63d7136388dc">post</a>" (I don't know if that's how we talk on github) talking about the Leaflet conversion, it was even where we did the conversion, but as the skin already has some steps accomplished, we will follow the "How to convert" here, which will be more easier.</p>
+                                    <ol class="list">
+                                        <li>First, let's go back to our FTP and go back to the phpVMS directory. After that, open the "<i>/lib</i>" folder.</li>
+                                        <li>Now, let's go to our installed package and then main directory again. There you will find the "<i>Lib</i>" folder, open it and you will see two more folders, the folder "<i>js</i>" and "<i>images</i>".<br><b>For information only:</b> The "<i>js</i>" folder contains Leaflet files for conversion. And in the folder "<i>images</i>" there is another file, which we will copy as well so we don't waste time.</li>
+                                        <li>You must do the following now: Copy or upload the files that are inside the folder "<i>js</i>" in the folder "<i>lib/js</i>" of your FTP. And copy the file from the "<i>image</i>" folder to the "<i>lib/images</i>" folder on your FTP.<br><b>Note:</b> Replace if required.</li>
+                                        <li>Now let's open the file "<i><b>core/app.config.php</b></i>" and the file "<i><b>core/local.config.php</b></i>" from your phpVMS directory and change a few things:</li>
+                                    </ol>
+
+                                    <h6>MAP_TYPE</h6>
+                                    <p>The base map can be customized and changed out to different providers. Find:</p>
+                                    <pre><code class="language-php">Config::Set('MAP_TYPE', 'G_PHYSICAL_MAP');</code></pre>
+                                    <p>And replace with:</p>
+                                    <pre><code class="language-php">Config::Set('MAP_TYPE', 'CartoDB.DarkMatter');</code></pre>
+                                    <p>You can also change <i><ins>CartoDB.DarkMatter</ins></i> to a different basemap, but in my opinion, <i><ins>CartoDB.DarkMatter</ins></i> is the best. Those options can be found <a href="http://leaflet-extras.github.io/leaflet-providers/preview">here</a>.</p>
+                                    <br/>
+                                    <h6>MAP_ZOOM_LEVEL</h6>
+                                    <p>The scaling for zoom is different between Google Maps and the Leaflet zoom system. Find:</p>
+                                    <pre><code class="language-php">Config::Set('MAP_ZOOM_LEVEL', 12);</code></pre>
+                                    <p>And replace with:</p>
+                                    <pre><code class="language-php">Config::Set('MAP_ZOOM_LEVEL', 5);</code></pre>
+                                    <br>
+                                    <p>The end result should look like this:</p>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6>From step 1 to 3</h6>
+                                            <div class="screenshot-holder">
+                                                <a href="assets/steptwo.png" data-title="From step 1 to step 3 - Final Result" data-toggle="lightbox"><img class="img-fluid" src="assets/steptwo.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/steptwo.png" data-title="From step 1 to step 3 - Final Result" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                        <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6>From step 4 to replacements</h6>
+                                            <div class="screenshot-holder">
+                                                <a href="assets/steptwo2.png" data-title="From step 4 to replacements - Final Result" data-toggle="lightbox"><img class="img-fluid" src="assets/steptwo2.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/steptwo2.png" data-title="From step 4 to replacements - Final Result" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div><!--//section-block-->
+                                <div id="step3"  class="section-block">
+                                    <h3 class="block-title">Step Three (Installing third party modules)</h3>
+                                    <p>Before we start step three, I would like to thank all the creators of the modules used in the skin for making their work available and, moreover, free of charge to the community, as well as all other creators of the module, snippets or developer. It is because of you, it is because of us, that we are making virtual aviation grow and grow closer and closer to reality.<br><br>This will be the stage where we must install the modules used in the skin, yes, this step will take a little more time. The installation tutorial for each module is found in the folder of its respective module, as well as the license and everything. The modules that we must install are located in the "<strong><i><ins>3rd Party Modules</ins></i></strong>" folder of the skin package in which you installed.</p>
+                                    <strong>Remember if! Do not install any original modules, as each module has undergone at least one small change to better adapt to the skin! All modules are in the skin package you downloaded, located in the "3rd Party Modules" folder.</strong><br><br>
+                                    <h6>Modules that must be installed in this step:</h6>
+                                    <ul>
+                                        <li>Airmail 3 (by simpilot)</li>
+                                        <li>Airports (by stuartpb)</li>
+                                        <li>Event Booking (by simpilot)</li>
+                                        <li>Extended Fleet (by magicflyer</li>
+                                        <li>Fltbook v2 (by web541)</li>
+                                        <li>Pilot Career (by servetas)</li>
+                                        <li>Simbrief for phpVMS (by Vangelis)</li>
+                                        <li>TopPilots (by simpilot)</li>
+                                        <li>TouchdownStats (by simpilot)</li>
+                                    </ul>
+                                    <p><b>Note:</b> Some modules require you to import a file into the database, so keep an eye on the files!</p>
+                                </div><!--//section-block-->
+                                <div id="step4"  class="section-block">
+                                    <h3 class="block-title">Step Four (Installing my modules and updating some files)</h3>
+                                    <p>We have now reached the fourth step, we are almost done! This step is similar to the previous one, but much more relaxed. In this step we will just update some files and insert my METAR module (Where I talk more about activating it in the <a class="scrollto" href="#weather-section">Weather Module category</a> -> Important to read).<br><br>First go to the skin package, where you will see the "Core" folder, open it and you will see two more folders (<i>core</i> and <i>modules</i>), now just transfer the files in their respective FTP directories, so: files that are inside the "<i><b>common</b></i>" folder for the "<i><b>core/common</b></i>" folder and folders that are inside the "<i><b>modules</b></i>" folder for the "<i><b>core/modules</b></i>" folder.</p>
+                                    <b>Note: You will need to replace the files that already exist, so replace it if required.</b><br><br>
+                                    <h6>So in summary, it would be like this:</h6>
+                                    <ul>
+                                        <li><b>core/common/ACARSData.class.php</b> (Will ask to replace - Added function to obtain number of flights at the moment)</li>
+                                        <li><b>core/common/OperationsData.class.php</b> (Will ask to replace - Added functions for Fltbook and Simbrief)</li>
+                                        <li><b>core/common/StatsData.class.php</b> (Will ask to replace - Added function to obtain number of miles for a pilot)</li>
+                                        <li><b>core/common/WeatherData.class.php</b> (My weather module)</li>
+                                        <li><b>core/modules/ACARS/ACARS.php</b> (Will ask to replace - Added page for live map in "full screen" and snippet by MrDalle)</li>
+                                        <li><b>core/modules/PIREPS/PIREPS.php</b> (Will ask to replace - Removed code showing flight map in PIREP)</li>
+                                        <li><b>core/modules/Profile/Profile.php</b> (Will ask to replace - Removed the code showing the flight map in profile)</li>
+                                        <li><b>core/modules/Weather/Weather.php</b> (My weather module)</li>
+                                    </ul>
+                                </div><!--//section-block-->
+                                <div id="step5"  class="section-block">
+                                    <h3 class="block-title">Step Five (Activating the skin)</h3>
+                                    <p>Finally the time has come when we are in the last step of the installation and we can already activate the skin.<br><br>But <b>before we start</b>, we still <b>haven't completely finished the "installation" to be ready to use</b>, after completing this step we must configure some small things before using, which can be found in the category <a class="scrollto" href="#weather-section">Weather Module</a> and <a class="scrollto" href="#config-section">Config File</a>).<br><br>This step is really very simple and very fast. We will now proceed to our website, where we must enter the phpVMS administration panel, click on the "<ins>Site & Settings</ins>" menu and finally open the "<ins>General Settings</ins>" page. There you will find a form with the main settings for your VA, but we will focus on the "<ins>Current Skin</ins>" section, in select, you must select our skin, that is: <b>StislaSkin</b> and save. And ready, StislaSkin should already be active and working almost perfectly on your website!</p>
+                                    <h6>Photo tutorial:</h6>
+
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/stepfive.png" data-title="Photo Tutorial" data-toggle="lightbox"><img class="img-fluid" src="assets/stepfive.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/stepfive.png" data-title="Photo Tutorial" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                        <div class="col-md-4 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/stepfive2.png" data-title="Photo Tutorial" data-toggle="lightbox"><img class="img-fluid" src="assets/stepfive2.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/stepfive2.png" data-title="Photo Tutorial" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                        <div class="col-md-4 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/stepfive3.png" data-title="Photo Tutorial" data-toggle="lightbox"><img class="img-fluid" src="assets/stepfive3.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/stepfive3.png" data-title="Photo Tutorial" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="weather-section" class="doc-section">
+                                <h2 class="section-title">Weather Module (About & Activation)</h2>
+                                <div class="section-block">
+                                    <p>The Weather module was developed by me and mainly by StislaSkin. This is a simple module, but easy to use, to show a specific METAR, this module also obtains information about the airport and TAF.<br><br><b>To use this module it is necessary to have a CheckWX.com API Key (Free or paid), see how to obtain:</b></p>
+                                    <ol class="list">
+                                        <li>First, you must access the <a href="https://www.checkwx.com/apikey">CheckWX.com</a> website and register to obtain your API Key.</li>
+                                        <li>And just that, very simple, after registering you must fill out a small form and the site will already give you your new API key, but we still have to insert it in the module.</li>
+                                    </ol>
+                                    <p><b>Let's now learn how to insert your key into the module:</b></p>
+                                    <ol class="list">
+                                        <li>To add the key is also very simple, first we must access the file "<b><i>WeatherData.class.php</i></b>" that was transferred to your hosting in step four of the installation. The file will be in "<b><i>core/common/WeatherData.class.php</i></b>".</li>
+                                        <li>After opening the file, in line "8" you will see the following code:</li>
+                                        <pre><code class="language-php">public static $api = 'API_KEY_HERE';</code></pre>
+                                        <p>You should just replace where "<b>API_KEY_HERE</b>" is with your API key. It should look something like:</p>
+                                        <pre><code class="language-php">public static $api = '2e851c8651efeg5a9ab7j758ba';</code></pre>
+                                        <li>And ready! The API is already inserted in the module, save the file and close.</li>
+                                    </ol>
+                                    <h6>Photo tutorial:</h6>
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/weather.png" data-title="After Registration (Form to get you API key) - Tutorial" data-toggle="lightbox"><img class="img-fluid" src="assets/weather.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/weather.png" data-title="After Registration (Form to get you API key) - Tutorial" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                        <div class="col-md-4 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/weather2.png" data-title="Copy your API Key - Tutorial" data-toggle="lightbox"><img class="img-fluid" src="assets/weather2.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/weather2.png" data-title="Copy your API Key - Tutorial" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                        <div class="col-md-4 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/weather3.png" data-title="Insert your API Key - Tutorial" data-toggle="lightbox"><img class="img-fluid" src="assets/weather3.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/weather3.png" data-title="Insert your API Key - Tutorial" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section id="config-section" class="doc-section">
+                                <h2 class="section-title">Config File (Configuring the skin)</h2>
+                                <div class="section-block">
+                                    <p>Finally!! We have reached the stage that after completing we can already use the skin successfully! This is also an important file and with future updates it will be even more important.<br><br>This steps we will configure the file "<b>config.json</b>" (<ins>located in lib/skins/StislaSkin/config.json</ins>), which as the name says is a configuration file, so that we will not be repeating several names/codes in several files, you will just fill in the file and the skin will already get the informations.</p>
+                                    <h6>Here you can see the file structure (Really quite simple in this version):</h6>
+<pre><code class="language-json">{
+    "dashboard": "1",
+    "discordID": "",
+    "VAicao": "CC"
+}</code></pre><br>
+                                    <h6>So let's see what each thing in the structure is (Image of each one below the table):</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>dashboard</th>
+                                                    <th>discordID</th>
+                                                    <th>VAicao</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Here you can change the layout of the dashboard you want.<br><b>1</b> = Default<br><b>2</b> = Modified</td>
+                                                    <td>Here you can enter the server ID of your discord and a widget for your server will appear on the dashboard. Leave empty (as is) if you don't have it or don't want to.</td>
+                                                    <td>Here you can enter the ICAO or IATA of your airline, or something else, but with a maximum of 3 letters (It will appear with the sidebar closed).</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><!--//table-responsive-->
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/dash.png" data-title="Dashboard - default" data-toggle="lightbox"><img class="img-fluid" src="assets/dash.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/dash.png" data-title="Dashboard - default" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                        <div class="col-md-3 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/dash2.png" data-title="Dashboard - Modified" data-toggle="lightbox"><img class="img-fluid" src="assets/dash2.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/dash2.png" data-title="Dashboard - Modified" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                        <div class="col-md-3 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/disc.png" data-title="discordID" data-toggle="lightbox"><img class="img-fluid" src="assets/disc.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/disc.png" data-title="discordID" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                        <div class="col-md-3 col-sm-12 col-sm-12">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/ICAO.png" data-title="VAicao" data-toggle="lightbox"><img class="img-fluid" src="assets/ICAO.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/ICAO.png" data-title="VAicao" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <section id="files-section" class="doc-section">
+                                <h2 class="section-title">Files (Explaining some files)</h2>
+                                <div class="section-block">
+                                    <ul class="list">
+                                        <li><b>frontpage_main.php:</b> One of the most important, here you will find the codes of your dashboard (Default).</li>
+                                        <li><b>frontpage_main_two.php:</b> Here you can find the codes of your dashboard (modified).</li>
+                                        <li><b>app_top.php:</b> Here you can find the codes for the sidebar and navbar.</li>
+                                        <li><b>layout.php:</b> Also one of the most important, here you will find the beginning and the end of the skin structure, like script, style and other tags.</li>
+                                        <li><b>profil_main.php:</b> Here you will find the codes of the pilot profile page (personal).</li>
+                                        <li><b>pilot_public_profile.php:</b> Here you will find the codes of the pilot profile page (public).</li>
+                                        <li><b>pireps_viewreport.php:</b> Here you will find the codes of the PIREP page.</li>
+                                        <li><b>schedule_bids.php:</b> Here you will find the codes on the reservation page.</li>
+                                    </ul>
+                                </div><!--//section-block-->
+                            </section>
+                            <section id="support-section" class="doc-section">
+                                <h2 class="section-title">Support (& Suggestions)</h2>
+                                <div class="section-block">
+                                    <p>You can contact me through the <a href="https://forum.phpvms.net/profile/51947-carloseduardo2409/">phpVMS forum</a>, I usually reply, but if I don't answer, you can call me on <a href="https://www.instagram.com/carlosmeduardo/">my Instagram</a>, which I'm sure I'll answer. Just like my other skin (<a href="https://forum.phpvms.net/topic/25606-free-elaskin-2018-designed-for-phpvms">ElaSkin</a>), I will be creating a post (<a href="">here</a>) where you can comment at will, giving suggestions, help with any errors, etc. It is even better because besides I can help you, the community can also help you, in addition, if someone else has the same error, the answer will already be in the forum.<br><br>I will also be opening a "vote" on the same post where you can give your opinion of the skin, so I know how to improve more and more.</p>
+                                    <h5><a href="">StislaSkin phpVMS Forum Post</a></h5>
+                                </div>
+                                
+                            </section><!--//doc-section-->
+
+                            <h2 style="text-align: center; margin-bottom: 20px;">Thank you for choose StislaSkin!</h2>
+                            <div class="callout-block callout-danger">
+                                <p><strong>Remember not to remove the credits from the used admin panel, the creator of the crewcenter and phpVMS, it is very important!</strong></p>
+                            </div>
+                            
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+	                        
+	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+	                                <a class="nav-link scrollto" href="#before-section">Before Start</a>
+	                                <a class="nav-link scrollto" href="#requirements-section">Requirements</a>
+	                                <a class="nav-link scrollto" href="#package-section">Package</a>
+	                                <a class="nav-link scrollto" href="#installation-section">Installation</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#step1">Step One</a>
+                                        <a class="nav-link scrollto" href="#step2">Step Two</a>
+                                        <a class="nav-link scrollto" href="#step3">Step Three</a>
+                                        <a class="nav-link scrollto" href="#step4">Step Four</a>
+                                        <a class="nav-link scrollto" href="#step5">Step Five</a>
+                                    </nav><!--//nav-->
+                                    <a class="nav-link scrollto" href="#weather-section">Weather Module</a>
+                                    <a class="nav-link scrollto" href="#config-section">Config File</a>
+	                                <a class="nav-link scrollto" href="#files-section">Files</a>
+	                                <a class="nav-link scrollto" href="#support-section">Support</a>
+	                            </nav><!--//doc-menu-->
+	                        
+                        </div>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                             
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>  
+    
+</body>
+</html> 
+

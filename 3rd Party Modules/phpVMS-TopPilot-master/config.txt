@@ -1,0 +1,7 @@
+plugin=Top Pilots
+author=David Clark
+email=david@simpilotgroup.com
+version=1.0
+published=5/16/2009
+license=Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License
+link=http://www.simpilotgroup.com
