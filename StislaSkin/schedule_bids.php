@@ -141,3 +141,40 @@
     </div>
     <?php } } ?>
 </div>
+
+<!-- REMOVE BIDS HELPER - START -->
+<script>
+    $('.deleteitem').on('click', function() {
+        var bid_id = $(this).attr("id");
+        console.log(bid_id);
+        $.ajax({
+            type: "POST",
+            url: "<?= url('/schedules/removebid') ?>",
+            data:{
+                id: bid_id
+            },
+            success:function(response) {
+                $('#bid'+bid_id).fadeOut( "slow" );
+                Swal.fire({
+                    title: 'Success!', 
+                    html: "Reservation removed successfully!", 
+                    icon: "success"
+                }).then(function() {
+                    window.location = "<?php echo SITE_URL; ?>";
+                });
+            },
+            error:function(){
+                Swal.fire({
+                    title: 'Oopsss!', 
+                    html: "There was an error removing your reservation, if you think this is an error, contact an administrator.", 
+                    icon: "error"
+                }).then(function() {
+                    window.location = "<?php echo SITE_URL; ?>";
+                });
+            }
+        });
+        
+        return false;
+    });
+</script>
+<!-- REMOVE BIDS HELPER - END -->
