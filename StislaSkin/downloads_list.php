@@ -41,7 +41,7 @@
                     </a>
                 </div>
 
-                <?php echo $download->name; ?><br/>
+	        <strong><?php echo $download->name; ?></strong><br/>
                 <?php echo $download->description; ?><br/><br/>
 
                 <a href="<?php echo url('/downloads/dl/'.$download->id);?>">Download</a>
