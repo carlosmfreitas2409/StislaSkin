@@ -191,23 +191,23 @@
         var errorsdiv     = $('#errors')[0];
         errorsdiv.innerHTML = '';
         $.ajax({
-            url: baseurl + "/action.php/Flights/get_jumpseat_cost",
+            url: baseurl + "/action.php/Fltbook/get_jumpseat_cost",
             type: 'POST',
             data: { depicao: "<?php echo $last_location->arricao; ?>", arricao: arricao, pilotid: "<?php echo Auth::$userinfo->pilotid; ?>" },
             success: function(data) {
-            data = $.parseJSON(data);
-            console.log(data);
-            if(data.error) {
-                $("#purchase_button").prop('disabled', true);
-                errorsdiv.innerHTML = "<font color='red'>Not enough funds for this transfer!</font>";
-            } else {
-                $("#purchase_button").prop('disabled', false);
-                distancediv.value = data.distance + "nm";
-                costdiv.value = "$" + data.total_cost;
-            }
+                data = $.parseJSON(data);
+                console.log(data);
+                if(data.error) {
+                    $("#purchase_button").prop('disabled', true);
+                    errorsdiv.innerHTML = "<font color='red'>Not enough funds for this transfer!</font>";
+                } else {
+                    $("#purchase_button").prop('disabled', false);
+                    distancediv.value = data.distance + "nm";
+                    costdiv.value = "$" + data.total_cost;
+                }
             },
             error: function(e) {
-            console.log(e);
+                console.log(e);
             }
         });
     }
