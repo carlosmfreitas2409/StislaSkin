@@ -7,6 +7,9 @@ class Weather extends CodonModule  {
 		} else {
 			$pilotid = Auth::$userinfo->pilotid;
 			$currentLocation = FltbookData::getLocation($pilotid);
+			if(!$last_location) {
+				FltbookData::updatePilotLocation($pilotid, Auth::$userinfo->hub);
+			}
 
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, 'https://api.checkwx.com/metar/'.$currentLocation->arricao.'/decoded');
