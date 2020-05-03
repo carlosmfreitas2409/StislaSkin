@@ -127,7 +127,7 @@
             </div>
 
             <div class="card-body">
-                <form action="<?php echo url('/Flights/jumpseat');?>" method="post">
+                <form action="<?php echo url('/Fltbook/jumpseat');?>" method="post">
                     <div class="form-group">
                         <label>Destination</label>
                         <select class="form-control" onchange="calculate_transfer(this.value)" name="depicao">
