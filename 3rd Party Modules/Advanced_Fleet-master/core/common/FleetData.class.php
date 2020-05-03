@@ -73,7 +73,7 @@
 			return $lastFlight;
 		}
 
-		public
+		public static
 
 		// -- Function Name : getAircraftTotals
 		// -- Params : $id
@@ -114,7 +114,7 @@
 
 		}
 
-		public
+		public static
 
 		// -- Function Name : get5MostRecentFlights
 		// -- Params : $id
@@ -126,7 +126,7 @@
 			return $allAircraftPireps;
 		}
 
-		public
+		public static
 
 		// -- Function Name : getAllScheduledFlights
 		// -- Params : $id
