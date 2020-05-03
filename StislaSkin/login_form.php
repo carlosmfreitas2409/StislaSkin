@@ -20,7 +20,7 @@
                     <form method="POST" action="<?php echo url('/login');?>" name="loginform" class="needs-validation" novalidate="">
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" name="email" class="form-control" tabindex="1" required autofocus>
+                            <input type="text" name="email" class="form-control" tabindex="1" required autofocus>
                             <div class="invalid-feedback">
                                 Please fill in your email
                             </div>
