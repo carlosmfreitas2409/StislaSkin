@@ -118,22 +118,24 @@
 							foreach($lastbids as $lastbid) {
 								$flightid = $lastbid->id
 						?>
-						<td height="25" width="10%" align="center"><font face="Bauhaus"><span><?php echo $lastbid->code; ?><?php echo $lastbid->flightnum; ?></span></font></td>
-						<?php
-							$params = $lastbid->pilotid;
+						<tr>
+							<td height="25" width="10%" align="center"><font face="Bauhaus"><span><?php echo $lastbid->code; ?><?php echo $lastbid->flightnum; ?></span></font></td>
+							<?php
+								$params = $lastbid->pilotid;
 
-							$pilot = PilotData::GetPilotData($params);
-							$pname = $pilot->firstname;
-							$psurname = $pilot->lastname;
-							$now = strtotime(date('d-m-Y',strtotime($lastbid->dateadded)));
-            				$date = date("d-m-Y", strtotime('+48 hours', $now));
-						?>
-						<td height="25" width="10%" align="center"><span><?php echo '<a class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Click to view Pilot Information!" href="  '.SITE_URL.'/index.php/profile/view/'.$pilot->pilotid.'">'.$pname.'</a>';?></span></td>
-						<td height="25" width="10%" align="center"><span class="text-success"><?php echo date('d-m-Y',strtotime($lastbid->dateadded)); ?></span></td>
-						<td height="25" width="10%" align="center"><span class="text-danger"><?php echo $date; ?></span></td>
-						<td height="25" width="10%" align="center"><span><font face=""><?php echo '<a class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Click to view Airport Information!" href="  '.SITE_URL.'/index.php/airports/get_airport?icao='.$lastbid->depicao.'">'.$lastbid->depicao.'</a>';?></font></span></td>
-						<td height="25" width="10%" align="center"><span><font face=""><?php echo '<a class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Click to view Airport Information!" href="'.SITE_URL.'/index.php/airports/get_airport?icao='.$lastbid->arricao.'">'.$lastbid->arricao.'</a>';?></font></span></td>
-						<td height="25" width="10%" align="center"><span><a class="btn btn- btn-sm" data-toggle="tooltip" data-placement="top" title="Click to view Aircraft Information!" href="<?php echo SITE_URL?>/index.php/Fleet/view/<?php echo '' . $lastbid->id . ''; ?>"><?php echo $lastbid->aircraft; ?></a></td>
+								$pilot = PilotData::GetPilotData($params);
+								$pname = $pilot->firstname;
+								$psurname = $pilot->lastname;
+								$now = strtotime(date('d-m-Y',strtotime($lastbid->dateadded)));
+								$date = date("d-m-Y", strtotime('+48 hours', $now));
+							?>
+							<td height="25" width="10%" align="center"><span><?php echo '<a class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Click to view Pilot Information!" href="  '.SITE_URL.'/index.php/profile/view/'.$pilot->pilotid.'">'.$pname.'</a>';?></span></td>
+							<td height="25" width="10%" align="center"><span class="text-success"><?php echo date('d-m-Y',strtotime($lastbid->dateadded)); ?></span></td>
+							<td height="25" width="10%" align="center"><span class="text-danger"><?php echo $date; ?></span></td>
+							<td height="25" width="10%" align="center"><span><font face=""><?php echo '<a class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Click to view Airport Information!" href="  '.SITE_URL.'/index.php/airports/get_airport?icao='.$lastbid->depicao.'">'.$lastbid->depicao.'</a>';?></font></span></td>
+							<td height="25" width="10%" align="center"><span><font face=""><?php echo '<a class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Click to view Airport Information!" href="'.SITE_URL.'/index.php/airports/get_airport?icao='.$lastbid->arricao.'">'.$lastbid->arricao.'</a>';?></font></span></td>
+							<td height="25" width="10%" align="center"><span><a class="btn btn- btn-sm" data-toggle="tooltip" data-placement="top" title="Click to view Aircraft Information!" href="<?php echo SITE_URL?>/index.php/Fleet/view/<?php echo '' . $lastbid->id . ''; ?>"><?php echo $lastbid->aircraft; ?></a></td>
+						</tr>
 						<?php } ?>
 					</tbody>
 				</table>
