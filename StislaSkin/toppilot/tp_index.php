@@ -86,82 +86,84 @@
             <div class="card-body">
                 <?php
                     $topflights = TopPilotData::top_pilot_flights($today['mon'], $today['year'], 5);
-                    $tophours = TopPilotData::top_pilot_hours($today['mon'], $today['year'], 5);
-                    $topmiles = TopPilotData::top_pilot_miles($today['mon'], $today['year'], 5);
 
                     if(!$topflights) {
                         $month = date( 'F', mktime(0, 0, 0, $today['mon'])); 
                         echo '<div class="alert alert-primary">No Pireps Filed For '.$month.' '.$today['year'].'</div>';
                     } else {
                         $month_name = date( 'F', mktime(0, 0, 0, $topflights[0]->month) );
+                        $tophours = TopPilotData::top_pilot_hours($today['mon'], $today['year'], 5);
+                        $topmiles = TopPilotData::top_pilot_miles($today['mon'], $today['year'], 5);
                 ?>
-                <div class="col-md-4">
-                    <div class="alert alert-primary">Top Pilot for <?php echo $month_name.' '.$topflights[0]->year; ?> (Flights Flown)</div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="row">Pilots</th>
-                                <th scope="row">Flights Flown</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                foreach ($topflights as $top) {
-                                    $pilot = PilotData::GetPilotData($all->pilotid);
-                            ?>
-                            <tr>
-                                <td><?php echo $pilot->firstname.' '.$pilot->lastname.' - '.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?></td>
-                                <td><?php echo $top->flights; ?></td>
-                            </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="alert alert-primary">Top Pilot for <?php echo $month_name.' '.$topflights[0]->year; ?> (Flights Flown)</div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="row">Pilots</th>
+                                    <th scope="row">Flights Flown</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    foreach ($topflights as $top) {
+                                        $pilot = PilotData::GetPilotData($top->pilotid);
+                                ?>
+                                <tr>
+                                    <td><?php echo $pilot->firstname.' '.$pilot->lastname.' - '.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?></td>
+                                    <td><?php echo $top->flights; ?></td>
+                                </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
 
-                <div class="col-md-4">
-                    <div class="alert alert-primary">Top Pilot for <?php echo $month_name.' '.$tophours[0]->year; ?> (Hours Flown)</div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="row">Pilots</th>
-                                <th scope="row">Hours Flown</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                foreach ($tophours as $top) {
-                                    $pilot = PilotData::GetPilotData($all->pilotid);
-                            ?>
-                            <tr>
-                                <td><?php echo $pilot->firstname.' '.$pilot->lastname.' - '.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?></td>
-                                <td><?php echo $top->hours; ?></td>
-                            </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
+                    <div class="col-md-4">
+                        <div class="alert alert-primary">Top Pilot for <?php echo $month_name.' '.$tophours[0]->year; ?> (Hours Flown)</div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="row">Pilots</th>
+                                    <th scope="row">Hours Flown</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    foreach ($tophours as $top) {
+                                        $pilot = PilotData::GetPilotData($top->pilotid);
+                                ?>
+                                <tr>
+                                    <td><?php echo $pilot->firstname.' '.$pilot->lastname.' - '.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?></td>
+                                    <td><?php echo $top->hours; ?></td>
+                                </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
 
-                <div class="col-md-4">
-                    <div class="alert alert-primary">Top Pilot for <?php echo $month_name.' '.$tophours[0]->year; ?> (Miles Flown)</div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="row">Pilots</th>
-                                <th scope="row">Miles Flown</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                foreach ($topmiles as $top) {
-                                    $pilot = PilotData::GetPilotData($all->pilotid);
-                            ?>
-                            <tr>
-                                <td><?php echo $pilot->firstname.' '.$pilot->lastname.' - '.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?></td>
-                                <td><?php echo $top->miles; ?></td>
-                            </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
+                    <div class="col-md-4">
+                        <div class="alert alert-primary">Top Pilot for <?php echo $month_name.' '.$tophours[0]->year; ?> (Miles Flown)</div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="row">Pilots</th>
+                                    <th scope="row">Miles Flown</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    foreach ($topmiles as $top) {
+                                        $pilot = PilotData::GetPilotData($top->pilotid);
+                                ?>
+                                <tr>
+                                    <td><?php echo $pilot->firstname.' '.$pilot->lastname.' - '.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?></td>
+                                    <td><?php echo $top->miles; ?></td>
+                                </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <?php } ?>
             </div>
