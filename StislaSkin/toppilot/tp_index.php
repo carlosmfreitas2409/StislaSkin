@@ -108,7 +108,7 @@
                             <tbody>
                                 <?php
                                     foreach ($topflights as $top) {
-                                        $pilot = PilotData::GetPilotData($top->pilotid);
+                                        $pilot = PilotData::GetPilotData($top->pilot_id);
                                 ?>
                                 <tr>
                                     <td><?php echo $pilot->firstname.' '.$pilot->lastname.' - '.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?></td>
@@ -131,7 +131,7 @@
                             <tbody>
                                 <?php
                                     foreach ($tophours as $top) {
-                                        $pilot = PilotData::GetPilotData($top->pilotid);
+                                        $pilot = PilotData::GetPilotData($top->pilot_id);
                                 ?>
                                 <tr>
                                     <td><?php echo $pilot->firstname.' '.$pilot->lastname.' - '.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?></td>
@@ -154,7 +154,7 @@
                             <tbody>
                                 <?php
                                     foreach ($topmiles as $top) {
-                                        $pilot = PilotData::GetPilotData($top->pilotid);
+                                        $pilot = PilotData::GetPilotData($top->pilot_id);
                                 ?>
                                 <tr>
                                     <td><?php echo $pilot->firstname.' '.$pilot->lastname.' - '.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?></td>
