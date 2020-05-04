@@ -1,35 +1,6 @@
 <?php if(!defined('IN_PHPVMS') && IN_PHPVMS !== true) { die(); } ?>
 <!-- Pagination => Enable it via the module settings -->
-<?php if($settings['pagination_enabled'] == 1) { ?>
-<style>
-	div.dataTables_paginate {
-		float: right;
-		margin-top: -25px;
-	}
-	div.dataTables_length {
-		float: left;
-		margin: 0;
-	}
-	div.dataTables_filter {
-		float: right;
-		margin: 0;
-	}
-
-	.fade {
-		display: inline-block;
-	}
-
-	#confirm {
-		z-index: 9999;
-	}
-</style>
-
-<script type="text/javascript" charset="utf-8">
-	$(document).ready(function() {
-		$('#schedules_table').dataTable( {"lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ]})
-	});
-</script>
-<?php } ?>
+<!-- Removed for a while until fixed. -->
 <!-- End Pagination -->
 
 <!-- Latest compiled and minified JavaScript - Modified to clear modal on data-dismiss -->
