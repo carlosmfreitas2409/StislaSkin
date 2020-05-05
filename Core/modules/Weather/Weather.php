@@ -7,7 +7,7 @@ class Weather extends CodonModule  {
 		} else {
 			$pilotid = Auth::$userinfo->pilotid;
 			$currentLocation = FltbookData::getLocation($pilotid);
-			if(!$last_location) {
+			if(!$currentLocation) {
 				FltbookData::updatePilotLocation($pilotid, Auth::$userinfo->hub);
 			}
 
