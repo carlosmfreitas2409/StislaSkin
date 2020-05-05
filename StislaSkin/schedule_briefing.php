@@ -195,6 +195,9 @@
             
             <p><em><strong>Note: Remember to sign up for your free <a href="http://www.simbrief.com" title="Sign up for SimBrief">SimBrief</a> account before using this feature. It won't work without it!</strong></em></p>   
             <button type="button" style="width:100%" class="btn btn-primary btn-lg" onclick="simbriefsubmit('<?php echo SITE_URL; ?>/index.php/SimBrief');" style="font-size:30px" value="Generate SimBrief">Click to Generate OFP</button>
-        </div>
+            <input type="hidden" name="airline" value="<?php echo $schedule->code?>"> 
+            <input type="hidden" name="fltnum" value="<?php echo $schedule->flightnum?>"> 
+            <input type="hidden" name="reg" value="<?php echo $schedule->registration?>">
+    	</div>
     </div>
 </form>
