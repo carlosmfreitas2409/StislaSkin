@@ -1,6 +1,7 @@
 <?php
     $last_location = FltbookData::getLocation(Auth::$userinfo->pilotid);
     $airs = FltbookData::arrivalairport($last_location->arricao);
+    $airlines = OperationsData::getAllAirlines();  
 
     if(!$airs) {
 ?>
@@ -23,11 +24,19 @@
     });
 </script>
 
+<!-- WARNING (OPEN EYES FOR ANY CHANGE HERE) -->
 <?php
     foreach ($airs as $air) {
         foreach ($airlines as $airline) {
             $allroutes = FltbookData::findschedule($air->arricao, $last_location->arricao, $airline->code);
+            if(!$allroutes) { $allroutes = array(); }
             foreach($allroutes as $route) {
+                if(Config::Get('RESTRICT_AIRCRAFT_RANKS') == 1 && Auth::LoggedIn()) {
+                    if($route->aircraftlevel > Auth::$userinfo->ranklevel) {
+                        continue;
+                    }
+                }
+                
                 $departure = OperationsData::getAirportInfo($route->depicao);
                 $arrival   = OperationsData::getAirportInfo($route->arricao);
 ?>
