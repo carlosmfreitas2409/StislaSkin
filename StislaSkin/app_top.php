@@ -219,7 +219,9 @@
                         <div class="d-sm-none d-lg-inline-block">Hi, <?php echo Auth::$userinfo->firstname; ?></div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
+                        <?php if(!$nextrank) { } else { ?>
                         <div class="dropdown-title"><?php echo $nextrank->minhours - $pilot_hours; ?>h to next rank</div>
+                        <?php } ?>
 
                         <a href="<?php echo url('/profile'); ?>" class="dropdown-item has-icon">
                             <i class="fas fa-user"></i> Profile
