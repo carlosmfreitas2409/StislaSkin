@@ -12,9 +12,6 @@
         FltbookData::updatePilotLocation($pilotid, Auth::$userinfo->hub);
     }
 
-    $percentage = ($pilot_hours/$nextrank->minhours) * 100;
-    $round = round($percentage);
-
     $pireps = PIREPData::getAllReportsForPilot($userinfo->pilotid);
     $pirep_list = PIREPData::getAllReportsForPilot(Auth::$pilot->pilotid);
 ?>
@@ -117,6 +114,22 @@
                 <div class="card-body">
                     <ul style="margin-bottom: 0;" class="list-unstyled user-progress list-unstyled-border list-unstyled-noborder">
                         <li class="media">
+                            <?php if(!$nextrank) { $rankInfo = RanksData::getRankInfo(Auth::$userinfo->rankid); ?>
+                            <img alt="image" class="mr-3" style="align-self: center;" width="50" src="<?php echo $rankInfo->rankimage; ?>">
+                            <div class="media-body">
+                                <div class="media-title"><?php echo $rankInfo->rank; ?></div>
+                                <div class="text-job text-muted"><?php echo $rankInfo->minhours; ?> hours</div>
+                            </div>
+                            <div class="media-progressbar">
+                                <div class="progress-text">Max Rank</div>
+                                    <div class="progress" data-height="6" style="height: 6px;">
+                                    <div class="progress-bar bg-primary" data-width="100%" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                            <div class="media-cta">
+                                <a href="#" class="btn btn-outline-primary">More</a>
+                            </div>
+                            <?php } else { $percentage = ($pilot_hours/$nextrank->minhours) * 100; $round = round($percentage);?>
                             <img alt="image" class="mr-3" style="align-self: center;" width="50" src="<?php echo $nextrank->rankimage; ?>">
                             <div class="media-body">
                                 <div class="media-title"><?php echo $nextrank->rank; ?></div>
@@ -131,6 +144,7 @@
                             <div class="media-cta">
                                 <a href="#" class="btn btn-outline-primary">More</a>
                             </div>
+                            <?php } ?>
                         </li>
                     </ul>
                 </div>
