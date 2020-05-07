@@ -121,7 +121,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="log" role="tabpanel" aria-labelledby="log-tab">
-                        <pre style="overflow-y: scroll; height: 300px;"><?php if(!$pirep->log) { echo 'There is no log for this flight'; } else { $pirep->log; } ?></pre>
+                        <pre style="overflow-y: scroll; height: 300px;"><?php if(!$pirep->log) { echo 'There is no log for this flight'; } else { echo $pirep->log; } ?></pre>
                     </div>
                 </div>
             </div>
