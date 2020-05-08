@@ -142,7 +142,7 @@
                                 </div>
                             </div>
                             <div class="media-cta">
-                                <a href="#" class="btn btn-outline-primary">More</a>
+                                <a href="<?php echo SITE_URL;?>/index.php/career" class="btn btn-outline-primary">More</a>
                             </div>
                             <?php } ?>
                         </li>
