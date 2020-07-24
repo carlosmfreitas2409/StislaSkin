@@ -107,7 +107,7 @@
 					Looks like there are no upcoming departures at the moment, do you feel like flying? Click <a href="<?php echo SITE_URL?>/index.php/fltbook">here</a> to bid a flight!
 				</div>
 				<?php } else { ?>
-
+			<div class="table-responsive">
 				<table class="table table-hover table-striped">
                     <thead>
                         <tr>
@@ -160,6 +160,7 @@
 						<?php } ?>
 					</tbody>
 				</table>
+				</div>
 				<?php } ?>
 			</div>
 		</div>
